@@ -32,4 +32,7 @@ def _store_prices(stock):
         bucket_name=bucket_name,
         object_name=f"{symbol}/prices.json",
         data=BytesIO(data),
-        length=len(data),
+        length=len(data)
+    )
+
+    return f'{objw.bucket_name}/{symbol}'
